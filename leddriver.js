@@ -70,7 +70,7 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
         },
 
         send: function() {
-            if(device) {
+            if(typeof(spidevice) != "undefined") {
                 return spi.send(this._getRegister(), spidevice);
             } else {
                 return spi.send(this._getRegister());
