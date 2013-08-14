@@ -93,12 +93,13 @@ parameters:
 
 Connect your Pi like this to the LED driver:
 
-|Raspberr Pi|led driver|
-|GND|GND|
-|5V or 3.3V (or external)|input V+|
-|SCLK|input CLK|
-|MOSI|input DIN|
-|CE0|input LAT|
+| Raspberr Pi | led driver |
+|:-----------:|:----------:|
+| GND | GND |
+| 5V or 3.3V (or external) | input V+ |
+| SCLK | input CLK |
+| MOSI | input DIN |
+| CE0  | input LAT |
 
 Connect `/OE` on the LED driver to `GND` or to a GPIO of your choice (you can quickly turn off all LEDs by using a GPIO).
 
