@@ -22,7 +22,8 @@
     "leddriver",
     "adafruit",
     "spi",
-    "pwm"
+    "pwm",
+    "TLC5947"
   ],
   "author": "Frédéric Worm",
   "license": "MIT"
