@@ -103,5 +103,8 @@ Connect your Pi like this to the LED driver:
 
 Connect `/OE` on the LED driver to `GND` or to a GPIO of your choice (you can quickly turn off all LEDs by using a GPIO).
 
+The SPI interface requires **root** access on the Raspberry Pi. Run your app with `sudo`!
+For more details on getting SPI to run see [node-simplespi](https://github.com/fjw/node-simplespi)!
+
 **I am not responsible for any damages to your hardware. Use this at your own risk.**
 
