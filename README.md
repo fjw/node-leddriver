@@ -93,8 +93,8 @@ parameters:
 
 Connect your Pi like this to the LED driver:
 
-| Raspberr Pi | led driver |
-|:-----------:|:----------:|
+| Raspberry Pi | led driver |
+|:------------:|:----------:|
 | GND | GND |
 | 5V or 3.3V (or external) | input V+ |
 | SCLK | input CLK |
