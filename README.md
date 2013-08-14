@@ -7,13 +7,13 @@ I wrote this to control my [Adafruit 24-Channel 12-bit PWM LED Driver](https://w
 This should also work with different SPI devices or host systems but my examples referr to this configuration.
 It could also be used for other PWM modules like motor controls etc.
 
-### Installation
+### installation
 
 ```sh
 npm install leddriver
 ```
 
-### Initialization
+### initialization
 
 ```js
 var LEDDRIVER = require("leddriver");
@@ -25,7 +25,7 @@ parameters:
 * the `bits per channel` of your leddriver
 * (optional) the name of the SPI device (if omitted `/dev/spidev0.0` as defined in [node-simplespi](https://github.com/fjw/node-simplespi) )
 
-### Directly setting values
+### directly setting values
 
 ```js
 driver.set(5, 819);
@@ -36,7 +36,7 @@ parameters:
 
 This example sets the value of channel 5 to 500. The maximum allowed value depends on the `bits per channel` of your device. Since I am using a 12bit SPI device it has 3 hexadecimal digits per channel ("000" to "FFF"). In decimal this is a value between 0 and 4095.
 
-### Percentage value setting
+### percentage value setting
 ```js
 driver.pset(5, 0.2);
 ```
@@ -46,13 +46,13 @@ driver.pset(5, 0.2);
 
 This example sets the value of channel 5 to 0.2 * maximum value. In my 12bit example this has exactly the same result like the first example (0.2 * 4095 = 819) but it is far easier to use like this.
 
-### Sending the values to your driver
+### sending the values to your driver
 ```js
 driver.send();
 ```
 This updates your led driver by sending the values.
 
-### Example
+### example
 ```js
 var LEDDRIVER = require("leddriver");
 var driver = new LEDDRIVER(24, 12);
@@ -89,7 +89,7 @@ parameters:
 * (optional) the channel of the second blue LED
 
 
-### Wiring the Raspberry Pi (example with adafruit led driver)
+### wiring the Raspberry Pi (example with adafruit led driver)
 
 Connect your Pi like this to the LED driver:
 
