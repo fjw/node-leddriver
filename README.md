@@ -23,7 +23,7 @@ var driver = new LEDDRIVER(24, 12);
 parameters:
 * the `number of channels` your leddriver has
 * the `bits per channel` of your leddriver
-* (optional) the name of the SPI device (if omitted `/dev/spidev0.0` as defined in [https://github.com/fjw/node-simplespi](node-simplespi))
+* (optional) the name of the SPI device (if omitted `/dev/spidev0.0` as defined in [https://github.com/fjw/node-simplespi](node-simplespi) )
 
 ### Directly setting values
 
