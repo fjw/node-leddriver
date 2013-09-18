@@ -20,6 +20,7 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
 
         _chanlen: 0,
         _values: [],
+        inverted: false,
         rgbleds: [],
 
         _init: function(channelcount, bitperchannel) {
@@ -50,6 +51,11 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
             return reg;
         },
 
+        invert: function() {
+
+            this.inverted = !this.inverted;
+            
+        },
 
         set: function(channelnum, value) {
 
@@ -97,6 +103,12 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
 
             var rgb = this._getRGBfromHex(hexcolor);
 
+            if(this.inverted) {
+              rgb.r = 1 - rgb.r;
+              rgb.g = 1 - rgb.g;
+              rgb.b = 1 - rgb.b;
+            }
+            
             this.pset(redchannel, rgb.r);
             this.pset(greenchannel, rgb.g);
             this.pset(bluechannel, rgb.b);
