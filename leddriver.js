@@ -109,14 +109,28 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
               rgb.b = 1 - rgb.b;
             }
             
-            this.pset(redchannel, rgb.r);
-            this.pset(greenchannel, rgb.g);
-            this.pset(bluechannel, rgb.b);
-
-            if( typeof(bluechannel2) != "undefined" ) {
-
-                this.pset(bluechannel2, rgb.b);
-
+            if(Array.isArray(redchannel)) {
+              redchannel.forEach(function(chan) {
+                this.pset(chan, rgb.r);
+              });
+            } else {
+              this.pset(redchannel, rgb.r);
+            }
+            
+            if(Array.isArray(greenchannel)) {
+              greenchannel.forEach(function(chan) {
+                this.pset(chan, rgb.g);
+              });
+            } else {
+              this.pset(greenchannel, rgb.g);
+            }
+            
+            if(Array.isArray(bluechannel)) {
+              bluechannel.forEach(function(chan) {
+                this.pset(chan, rgb.b);
+              });
+            } else {
+              this.pset(bluechannel, rgb.b);
             }
 
         },
