@@ -99,7 +99,7 @@ exports = module.exports = function(channelcount, bitperchannel, spidevice) {
             return true;
         },
 
-        setRGB: function(hexcolor, redchannel, greenchannel, bluechannel, bluechannel2) {
+        setRGB: function(hexcolor, redchannel, greenchannel, bluechannel) {
 
             var rgb = this._getRGBfromHex(hexcolor);
 
