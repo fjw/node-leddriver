@@ -89,6 +89,18 @@ parameters:
 * (optional) the channel of the second blue LED
 
 
+### Special issues with MOSFETS
+
+When driving with MOSFETS like discussed in the [adafruit Forums](http://forums.adafruit.com/viewtopic.php?p=217544#p217544) you should invert (1=0, 0=1) your output.
+You can turn on inversion of setRGB:
+
+```js
+driver.invert();
+```
+
+thx @ [jnovack](https://github.com/jnovack)
+
+
 ### wiring the Raspberry Pi (example with adafruit led driver)
 
 Connect your Pi like this to the LED driver:
